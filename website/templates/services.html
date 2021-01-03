@@ -1,0 +1,251 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block navbar %}
+<nav class="main_nav">
+	<ul class="d-flex flex-row align-items-center justify-content-start">
+		<li><a href="{% url 'home' %}">Home</a></li>
+		<li><a href="{% url 'about' %}">About us</a></li>
+		<li class="active"><a href="{% url 'services' %}">Services</a></li>
+		<li><a href="{% url 'contact' %}">Contact</a></li>
+	</ul>
+</nav>
+{% endblock %}
+{% block title %}Services{% endblock %}
+{% block content %}
+
+<!-- Home -->
+
+<div class="home d-flex flex-column align-items-start justify-content-end">
+	<!-- <div class="background_image" style="background-image:url(images/about.jpg)"></div> -->
+	<div class="parallax_background parallax-window" data-parallax="scroll"
+		data-image-src="{% static 'website/images/animal_home.jpg'%}" data-speed="0.8"></div>
+	<div class="home_overlay"><img src="{% static 'website/images/home_overlay.png'%}" alt=""></div>
+	<div class="home_container">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="home_content">
+						<div class="home_title">Services</div>
+						<div class="home_text">Our main focus is to educate pet owners, give accurate diagnoses, and
+							provide the best care for your pet.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Services -->
+
+<div class="services">
+	<div class="container">
+		<div class="row">
+			<div class="col text-center">
+				<div class="section_title_container">
+					<div class="section_subtitle">This is COD Pets</div>
+					<div class="section_title">
+						<h2>Our Services</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row services_row">
+
+			<!-- Service -->
+			<div class="col-xl-4 col-md-6 service_col">
+				<div class="service text-center">
+					<div class="service">
+						<div
+							class="icon_container d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
+							<div class="icon"><img src="{% static 'website/images/icon_4.svg'%}"
+									alt="https://www.flaticon.com/authors/prosymbols"></div>
+						</div>
+						<div class="service_title">Senior Pet Care</div>
+						<div class="service_text">
+							<p>Whether you have watched your pet age or you have adopted an older pet, senior pet care
+								is very different than caring for a younger animal. Correct senior pet carecan increase
+								their lifespan and ensure further comfort.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Service -->
+			<div class="col-xl-4 col-md-6 service_col">
+				<div class="service text-center">
+					<div class="service">
+						<div
+							class="icon_container d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
+							<div class="icon"><img src="{% static 'website/images/icon_5.svg'%}"
+									alt="https://www.flaticon.com/authors/prosymbols"></div>
+						</div>
+						<div class="service_title">Surgery and Hospitalization</div>
+						<div class="service_text">
+							<p>Our highly trained doctors and fully equipped high-tech surgery suites ensure your pet’s
+								safety during and after surgery. We use monitoring equipment to track your pet’s vital
+								signs and high quality anesthesia to minimize risk.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Service -->
+			<div class="col-xl-4 col-md-6 service_col">
+				<div class="service text-center">
+					<div class="service">
+						<div
+							class="icon_container d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
+							<div class="icon"><img src="{% static 'website/images/icon_6.svg'%}"
+									alt="https://www.flaticon.com/authors/prosymbols"></div>
+						</div>
+						<div class="service_title">Breeding Services</div>
+						<div class="service_text">
+							<p>Our clinic offers a range of assisted reproductive services for all kinds of animals.
+								including embryo transfer and foetal sexing. Embryo transfer involves transplanting an
+								embryo from a donor mare to a recipient…</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Service -->
+			<div class="col-xl-4 col-md-6 service_col">
+				<div class="service text-center">
+					<div class="service">
+						<div
+							class="icon_container d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
+							<div class="icon"><img src="{% static 'website/images/icon_7.svg'%}"
+									alt="https://www.flaticon.com/authors/prosymbols"></div>
+						</div>
+						<div class="service_title">Preventive Care and Check-Ups</div>
+						<div class="service_text">
+							<p>Nothing is more important than keeping our patients healthy. Preventive medicine focuses
+								on avoiding disease and trying to find subtle changes that will help us catch issues
+								before they become major life-threatening problems.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Service -->
+			<div class="col-xl-4 col-md-6 service_col">
+				<div class="service text-center">
+					<div class="service">
+						<div
+							class="icon_container d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
+							<div class="icon"><img src="{% static 'website/images/icon_8.svg'%}"
+									alt="https://www.flaticon.com/authors/prosymbols"></div>
+						</div>
+						<div class="service_title">Dental Care</div>
+						<div class="service_text">
+							<p>With regular cleaning and polishing we can prevent painful decay and enhance the life of
+								your pet. And, when problems do arise, we can pinpoint the areas that need our special
+								attention using digital dental radiography.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Service -->
+			<div class="col-xl-4 col-md-6 service_col">
+				<div class="service text-center">
+					<div class="service">
+						<div
+							class="icon_container d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
+							<div class="icon"><img src="{% static 'website/images/icon_3.svg'%}"
+									alt="https://www.flaticon.com/authors/prosymbols"></div>
+						</div>
+						<div class="service_title">Diagnosis & Treatment Services</div>
+						<div class="service_text">
+							<p>We use advanced diagnostic equipment, including digital radiography, electrocardiograms
+								and digital otoscopy that also give our vets a powerful set of tools for finding and
+								solving animal health care problems fast.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<!-- Before and After -->
+
+<div class="before_and_after">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="section_title_container text-center">
+					<div class="section_subtitle">This is COD Pets</div>
+					<div class="section_title">
+						<h2>Prices and Packages</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Prices -->
+
+<div class="prices">
+	<div class="container">
+		<div class="row">
+
+			<!-- Price -->
+			<div class="col-lg-6 price_col">
+				<div class="price">
+					<div class="price_title">Basic</div>
+					<div class="price_text">
+						<p>Routinely recommended vaccines. Two comprehensive physical exams.</p>
+					</div>
+					<div class="price_panel">From 1500</div>
+				</div>
+			</div>
+
+			<!-- Price -->
+			<div class="col-lg-6 price_col">
+				<div class="price">
+					<div class="price_title">Classic</div>
+					<div class="price_text">
+						<p>Routinely recommended vaccines. Two comprehensive physical exams. Early screening for serious
+							illnesses.</p>
+					</div>
+					<div class="price_panel">From $2000</div>
+				</div>
+			</div>
+
+			<!-- Price -->
+			<div class="col-lg-6 price_col">
+				<div class="price">
+					<div class="price_title">Gold</div>
+					<div class="price_text">
+						<p>Routinely recommended vaccines. Two comprehensive physical exams. Early screening for serious
+							illnesses. Discounts on most services.</p>
+					</div>
+					<div class="price_panel">From $2500</div>
+				</div>
+			</div>
+
+			<!-- Price -->
+			<div class="col-lg-6 price_col">
+				<div class="price">
+					<div class="price_title">Platinum</div>
+					<div class="price_text">
+						<p>Routinely recommended vaccines. Two comprehensive physical exams. Early screening for serious
+							illnesses. Discounts on most services. Online access to your pet's health records.</p>
+					</div>
+					<div class="price_panel">From $3000</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<!-- Newsletter -->
+
+{% block newsletter %}
+{%endblock %}
+
+{% endblock %}

@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block navbar %}
+<nav class="main_nav">
+	<ul class="d-flex flex-row align-items-center justify-content-start">
+		<li><a href="{% url 'home' %}">Home</a></li>
+		<li><a href="{% url 'about' %}">About us</a></li>
+		<li><a href="{% url 'services' %}">Services</a></li>
+		<li class="active"><a href="{% url 'contact' %}">Contact</a></li>
+	</ul>
+</nav>
+{% endblock %}
+{% block title %}Contact{% endblock %}
+{% block content %}
+<!-- Home -->
+
+<div class="home d-flex flex-column align-items-start justify-content-end">
+	<!-- <div class="background_image" style="background-image:url(images/about.jpg)"></div> -->
+	<div class="parallax_background parallax-window" data-parallax="scroll"
+		data-image-src="{% static 'website/images/animal_home_2.jpg'%}" data-speed="0.8"></div>
+	<div class="home_overlay"><img src="{% static 'website/images/home_overlay.png'%}" alt=""></div>
+	<div class="home_container">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="home_content">
+						<div class="home_title">Contact</div>
+						<div class="home_text">Do you have a question?</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Contact -->
+
+<div class="contact">
+	<div class="container">
+		<div class="row">
+
+			{% if name %}
+			<div class="col-lg-6">
+				<h3>Message Sent Sucessfully!</h3>
+				<img src="{% static 'website/images/mail_dogs.png'%}" alt="">
+			</div>
+			{% else %}
+			<!-- Contact Form -->
+			<div class="col-lg-6">
+				<div class="contact_form_container">
+					<div class="contact_form_title">Contact us by Email</div>
+					<form action="{% url 'contact' %}" method="post" class="contact_form" id="contact_form">
+						{% csrf_token %}
+						<div class="d-flex flex-row align-items-start justify-content-between flex-wrap">
+							<input type="text" name="name" class="contact_input" placeholder="Your Name"
+								required="required">
+							<input type="email" name="email" class="contact_input" placeholder="Your E-mail"
+								required="required">
+							<textarea style="height: 100px;" name="message" id="datepicker"
+								class="w-100 contact_input datepicker" placeholder="Message"
+								required="required"></textarea>
+						</div>
+						<input type="submit" class="button button_1 contact_button trans_200"></input>
+					</form>
+				</div>
+			</div>
+			{% endif %}
+
+			<!-- Contact Content -->
+			<div class="col-lg-5 offset-lg-1 contact_col">
+				<div class="contact_content">
+					<div class="contact_content_title">Get in touch with us</div>
+					<div class="contact_content_text">
+						<p>Fill out the form to message us or give us a call.</p>
+					</div>
+					<div class="direct_line d-flex flex-row align-items-center justify-content-start">
+						<div class="direct_line_title text-center">Direct Line</div>
+						<div class="direct_line_num text-center">+53 345 7953 324</div>
+					</div>
+					<div class="contact_info">
+						<ul>
+							<li class="d-flex flex-row align-items-start justify-content-start">
+								<div>Address</div>
+								<div>1481 Creekside Lane Avila Beach, CA 931</div>
+							</li>
+							<li class="d-flex flex-row align-items-start justify-content-start">
+								<div>Phone</div>
+								<div>+53 345 7953 32453</div>
+							</li>
+							<li class="d-flex flex-row align-items-start justify-content-start">
+								<div>E-mail</div>
+								<div>cod5000@gmail.com</div>
+							</li>
+						</ul>
+					</div>
+					<div class="contact_social">
+						<ul class="d-flex flex-row align-items-center justify-content-start">
+							<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row google_map_row">
+			<div class="col">
+
+				<!-- Contact Map -->
+
+				<div class="contact_map">
+
+					<!-- Google Map -->
+
+					<div class="map">
+						<div id="google_map" class="google_map">
+							<div class="map_container">
+								<iframe id="map"
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3002.5110974673976!2d-73.16440284823433!3d41.18882957918131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e80c344ffcdc69%3A0x3e051e1e1e9128c4!2s85%20Summerfield%20Ave%2C%20Bridgeport%2C%20CT%2006610!5e0!3m2!1sen!2sus!4v1609530471554!5m2!1sen!2sus"
+									frameborder="0" style="border:0;" aria-hidden="false" tabindex="0"></iframe>
+								<!-- <div id="map"></div> -->
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Newsletter -->
+{% block newsletter %}
+{%endblock %}
+
+{% endblock %}

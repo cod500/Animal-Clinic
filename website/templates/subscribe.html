@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Appointment Sucess{% endblock %}
+{% block content %}
+
+<!-- Home -->
+
+<div class="home d-flex flex-column align-items-start justify-content-end">
+    <div class="parallax_background parallax-window" data-parallax="scroll"
+        data-image-src="{% static 'website/images/animall_success.jpg'%}" data-speed="0.8"></div>
+    <div class="home_overlay blur"><img src="{% static 'website/images/home_overlay.png'%}" alt=""></div>
+    <div class="home_container">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="home_content">
+                        <div class="home_text mt-2 text-dark">You have seccuessfully subscribed to the COD Pets
+                            newsletter. We have sent you an email to confirm.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Elements -->
+
+<div class="elements">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <!-- Milestones -->
+                <div class="milestones">
+                    <div class="row milestones_row">
+
+                        <!-- Milestone -->
+                        <div class="col-md-3 milestone_col">
+                            <div class="milestone">
+                                <div class="milestone_counter" data-end-value="5000" data-sign-before="+">0</div>
+                                <div class="milestone_text">Satisfied Owners</div>
+                            </div>
+                        </div>
+
+                        <!-- Milestone -->
+                        <div class="col-md-3 milestone_col">
+                            <div class="milestone">
+                                <div class="milestone_counter" data-end-value="96%">0</div>
+                                <div class="milestone_text">Referral Rate
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Milestone -->
+                        <div class="col-md-3 milestone_col">
+                            <div class="milestone">
+                                <div class="milestone_counter" data-end-value="1000" data-sign-before="+">0</div>
+                                <div class="milestone_text">Surgeries</div>
+                            </div>
+                        </div>
+
+                        <!-- Milestone -->
+                        <div class="col-md-3 milestone_col">
+                            <div class="milestone">
+                                <div class="milestone_counter" data-end-value="5">0</div>
+                                <div class="milestone_text">Awards Won</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+<!-- Newsletter -->
+
+{% block newsletter %}
+{%endblock %}
+
+{% endblock %}

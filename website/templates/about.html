@@ -1,0 +1,200 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block navbar %}
+<nav class="main_nav">
+	<ul class="d-flex flex-row align-items-center justify-content-start">
+		<li><a href="{% url 'home' %}">Home</a></li>
+		<li class="active"><a href="{% url 'about' %}">About us</a></li>
+		<li><a href="{% url 'services' %}">Services</a></li>
+		<li><a href="{% url 'contact' %}">Contact</a></li>
+	</ul>
+</nav>
+{% endblock %}
+{% block title %}About Us{% endblock %}
+{% block content %}
+<!-- Home -->
+
+<div class="home d-flex flex-column align-items-start justify-content-end">
+	<!-- <div class="background_image" style="background-image:url(images/about.jpg)"></div> -->
+	<div class="parallax_background parallax-window" data-parallax="scroll"
+		data-image-src="{% static 'website/images/about_animal.jpg'%}" data-speed="0.8"></div>
+	<div class="home_overlay"><img src="{% static 'website/images/home_overlay.png'%}" alt=""></div>
+	<div class="home_container">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="home_content">
+						<div class="home_title">About us</div>
+						<div class="home_text">We are a family owned and operated clinic specializing in small animals.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Intro -->
+
+<div class="intro">
+	<div class="container">
+		<div class="row">
+
+			<!-- Intro Content -->
+			<div class="col-lg-8">
+				<div class="intro_content">
+					<div class="section_title_container">
+						<div class="section_subtitle">This is COD Pets</div>
+						<div class="section_title">
+							<h2>Welcome to our Clinic</h2>
+						</div>
+					</div>
+					<div class="intro_text">
+						<p>During the lifetime of your animal, we will provide routine preventive veterinary care, early
+							detection and treatment of disease, and complete medical and surgical treatments and
+							therapies. We offer comprehensive pet care and animal resources, with information about
+							caring for your pets, health and behavior materials, and general advice. Get instant
+							information on recommended nutrition and behavior tips for your dog/cat from our
+							veterinarians through the website.</p>
+					</div>
+
+					<!-- Milestones -->
+					<div class="milestones">
+						<div class="row milestones_row">
+
+							<!-- Milestone -->
+							<div class="col-md-3 milestone_col">
+								<div class="milestone">
+									<div class="milestone_counter" data-end-value="5000" data-sign-before="+">0</div>
+									<div class="milestone_text">Satisfied Owners</div>
+								</div>
+							</div>
+
+							<!-- Milestone -->
+							<div class="col-md-3 milestone_col">
+								<div class="milestone">
+									<div class="milestone_counter" data-end-value="96%">0</div>
+									<div class="milestone_text">Referral Rate
+									</div>
+								</div>
+							</div>
+
+							<!-- Milestone -->
+							<div class="col-md-3 milestone_col">
+								<div class="milestone">
+									<div class="milestone_counter" data-end-value="1000" data-sign-before="+">0</div>
+									<div class="milestone_text">Surgeries</div>
+								</div>
+							</div>
+
+							<!-- Milestone -->
+							<div class="col-md-3 milestone_col">
+								<div class="milestone">
+									<div class="milestone_counter" data-end-value="5">0</div>
+									<div class="milestone_text">Awards Won</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<!-- Intro Image -->
+			<div class="col-lg-3 offset-lg-1">
+				<div class=""><img src="{% static 'website/images/about_doctor.jpg'%}" alt="" width="400">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Call to action -->
+
+<div class="cta">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div
+					class="cta_container d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-start">
+					<div class="cta_content">
+						<div class="cta_title">Make your appointment today!</div>
+						<div class="cta_text">We treat your pets like the valued family members they are.</div>
+					</div>
+					<div class="cta_phone ml-lg-auto">+34 586 778 8892</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Team -->
+
+<div class="team">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="section_title_container text-center">
+					<div class="section_subtitle">This is COD Pets</div>
+					<div class="section_title">
+						<h2>Meet the Veterinarians</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row team_row">
+
+			<!-- Team Item -->
+			<div class="col-lg-4 team_col">
+				<div class="team_item text-center d-flex flex-column aling-items-center justify-content-end">
+					<div class="team_image"><img src="{% static 'website/images/team_1.jpg'%}" alt=""></div>
+					<div class="team_content text-center">
+						<div class="team_name"><a href="#">Michael Smith</a></div>
+						<div class="team_title">Associate Veterinarian</div>
+						<div class="team_text">
+							<p>Michael has been working with us since 2010 as an Associate Veterinarian at our office.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Team Item -->
+			<div class="col-lg-4 team_col">
+				<div class="team_item text-center d-flex flex-column aling-items-center justify-content-end">
+					<div class="team_image"><img src="{% static 'website/images/team_2.jpg'%}" alt=""></div>
+					<div class="team_content text-center">
+						<div class="team_name"><a href="#">Samantha Doe</a></div>
+						<div class="team_title">Surgeon</div>
+						<div class="team_text">
+							<p>Samantha is an unmatched expert when it comes to performing surgery.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Team Item -->
+			<div class="col-lg-4 team_col">
+				<div class="team_item text-center d-flex flex-column aling-items-center justify-content-end">
+					<div class="team_image"><img src="{% static 'website/images/team_3.jpg'%}" alt=""></div>
+					<div class=" team_content text-center">
+						<div class="team_name"><a href="#">James Carl</a></div>
+						<div class="team_title">Associate Veterinarian</div>
+						<div class="team_text">
+							<p>Dr. Carl founded provides all our clients with quality veterinary services.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<!-- Newsletter -->
+
+{% block newsletter %}
+{%endblock %}
+
+{% endblock %}

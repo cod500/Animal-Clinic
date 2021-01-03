@@ -1,0 +1,480 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block navbar %}
+<nav class="main_nav">
+	<ul class="d-flex flex-row align-items-center justify-content-start">
+		<li class="active"><a href="{% url 'home' %}">Home</a></li>
+		<li><a href="{% url 'about' %}">About us</a></li>
+		<li><a href="{% url 'services' %}">Services</a></li>
+		<li><a href="{% url 'contact' %}">Contact</a></li>
+	</ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+<!-- Home -->
+
+<div class="home">
+
+	<!-- Home Slider -->
+	<div class="home_slider_container">
+		<div class="owl-carousel owl-theme home_slider">
+
+			<!-- Slide -->
+			<div class="owl-item">
+				<div class="background_image" style="background-image:url(static/website/images/animal_home.jpg)">
+				</div>
+				<div class="home_container">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<div class="home_content">
+									<div class="home_subtitle">#1 Veterinarian Clinic</div>
+									<div class="home_title">Give your pet the best care</div>
+									<div class="home_text">
+										<p>We're committed to giving your pets extraordinary care whenever and wherever
+											they need it. Partner with one of our veterinarians today to begin
+											proactively monitoring the health and wellness of the pets you love.</p>
+									</div>
+									<div class="home_buttons d-flex flex-row align-items-center justify-content-start">
+										<div class="button button_2 trans_200"><a href="#">make an
+												appointment</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Slide -->
+			<div class="owl-item">
+				<div class="background_image" style="background-image:url(static/website/images/animal_home_2.jpg)">
+				</div>
+				<div class="home_container">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<div class="home_content">
+									<div class="home_subtitle">More than 20 Years of Trust</div>
+									<div class="home_title">Laser Rehab Therapy</div>
+									<div class="home_text">
+										<p>People all over the US trust us with their pets and we are glad to make even
+											the small pets healthier.</p>
+									</div>
+									<div class="home_buttons d-flex flex-row align-items-center justify-content-start">
+										<div class="button button_2 trans_200"><a href="#">make an
+												appointment</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Slide -->
+			<div class="owl-item">
+				<div class="background_image" style="background-image:url(static/website/images/animal_home_3.jpg)">
+				</div>
+				<div class="home_container">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<div class="home_content">
+									<div class="home_subtitle">Emergency Veterinarian Services</div>
+									<div class="home_title">Small Animal Services</div>
+									<div class="home_text">
+										<p>Learn more about our clinic’s schedule and cases, in which your pets should
+											become our patients.</p>
+									</div>
+									<div class="home_buttons d-flex flex-row align-items-center justify-content-start">
+										<div class="button button_2 trans_200"><a href="#">make an
+												appointment</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- Home Slider Dots -->
+
+		<div class="home_slider_dots">
+			<ul id="home_slider_custom_dots"
+				class="home_slider_custom_dots d-flex flex-row align-items-center justify-content-start">
+				<li class="home_slider_custom_dot trans_200 active"></li>
+				<li class="home_slider_custom_dot trans_200"></li>
+				<li class="home_slider_custom_dot trans_200"></li>
+			</ul>
+		</div>
+
+	</div>
+</div>
+
+<!-- Intro -->
+
+<div class="intro">
+	<div class="container">
+		<div class="row">
+
+			<!-- Intro Content -->
+			<div class="col-lg-6 intro_col">
+				<div class="intro_content">
+					<div class="section_title_container">
+						<div class="section_subtitle">This is COD Pets</div>
+						<div class="section_title">
+							<h2>Welcome to our Clinic</h2>
+						</div>
+					</div>
+					<div class="intro_text">
+						<p>During the lifetime of your animal, we will provide routine preventive veterinary care, early
+							detection and treatment of disease, and complete medical and surgical treatments and
+							therapies. We offer comprehensive pet care and animal resources, with information about
+							caring for your pets, health and behavior materials, and general advice. Get instant
+							information on recommended nutrition and behavior tips for your dog/cat from our
+							veterinarians through the website.</p>
+					</div>
+					<div class="milestones">
+						<div class="row milestones_row">
+
+							<!-- Milestone -->
+							<div class="col-md-4 milestone_col">
+								<div class="milestone">
+									<div class="milestone_counter" data-end-value="5000" data-sign-before="+">0
+									</div>
+									<div class="milestone_text">Satisfied Owners</div>
+								</div>
+							</div>
+
+							<!-- Milestone -->
+							<div class="col-md-4 milestone_col">
+								<div class="milestone">
+									<div class="milestone_counter" data-end-value="96%">0</div>
+									<div class="milestone_text">Referral Rate</div>
+								</div>
+							</div>
+
+							<!-- Milestone -->
+							<div class="col-md-4 milestone_col">
+								<div class="milestone">
+									<div class="milestone_counter" data-end-value="1000" data-sign-before="+">0</div>
+									<div class="milestone_text">Surgeries</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Appointment Form -->
+			<div class="col-lg-6">
+				<div class="contact_form_container">
+					<div class="contact_form_title">Make an Appointment</div>
+					<form action="{% url 'success' %}" method="post" class="contact_form" id="contact_form">
+						{% csrf_token %}
+						<div class="d-flex flex-row align-items-start justify-content-between flex-wrap">
+							<input type="text" name="name" class="contact_input" placeholder="Your Name"
+								required="required">
+							<input type="email" name="email" class="contact_input" placeholder="Your E-mail"
+								required="required">
+							<input type="tel" name="phone" class="contact_input" placeholder="Your Phone"
+								required="required">
+							<select name="service" class="contact_select contact_input" required>
+								<option disabled="" selected="">Service</option>
+								<option>Routine checkup</option>
+								<option>Dental care</option>
+								<option>Treatment</option>
+								<option>Vaccinations</option>
+								<option>Surgery</option>
+							</select>
+							<select name="doctor" class="contact_select contact_input" required="required">
+								<option disabled="" selected="">Doctor</option>
+								<option>Michael Smith</option>
+								<option>Samantha Doe</option>
+								<option>James Carl</option>
+							</select>
+							<input type="text" name="date" id="datepicker" class="contact_input datepicker"
+								placeholder="Date" required="required">
+						</div>
+						<input type="submit" class="button button_1 contact_button trans_200">Make an
+						appointment</input>
+					</form>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<!-- Why Choose Us -->
+
+<div class="">
+	<!-- <div class="background_image" style="background-image:url(images/why.jpg)"></div> -->
+	<div class="container">
+		<div class="row row-eq-height">
+
+			<!-- Why Choose Us Image -->
+			<div class="col-lg-6 order-lg-1 order-2">
+				<div class="why_image_container">
+					<div class="why_image"><img src="{% static 'website/images/why_animal.jpg'%}" alt=""></div>
+				</div>
+			</div>
+
+			<!-- Why Choose Us Content -->
+			<div class="col-lg-6 order-lg-2 order-1">
+				<div class="why_content">
+					<div class="section_title_container">
+						<div class="section_subtitle">This is COD Pets</div>
+						<div class="section_title">
+							<h2>Why choose us?</h2>
+						</div>
+					</div>
+					<div class="why_text">
+						<p>We're committed to giving your pets extraordinary care whenever and wherever they need it.
+							Partner with one of our veterinarians today to begin proactively monitoring the health and
+							wellness of the pets you love.
+
+							We stay on top of the latest advances in veterinarian technology and above all, remembers
+							that all animals and pets need to be treated with loving care.</p>
+					</div>
+					<div class="why_list">
+						<ul>
+
+							<!-- Why List Item -->
+							<li class="d-flex flex-row align-items-center justify-content-start">
+								<div
+									class="icon_container d-flex flex-column align-items-center justify-content-center">
+									<div class="icon"><img src="{% static 'website/images/icon_1.svg'%}"
+											alt="https://www.flaticon.com/authors/prosymbols"></div>
+								</div>
+								<div class="why_list_content">
+									<div class="why_list_title">Only Top Products</div>
+									<div class="why_list_text">Our team provides various treatments for your pets </div>
+								</div>
+							</li>
+
+							<!-- Why List Item -->
+							<li class="d-flex flex-row align-items-center justify-content-start">
+								<div
+									class="icon_container d-flex flex-column align-items-center justify-content-center">
+									<div class="icon"><img src="{% static 'website/images/icon_2.svg'%}"
+											alt="https://www.flaticon.com/authors/prosymbols"></div>
+								</div>
+								<div class="why_list_content">
+									<div class="why_list_title">The best Doctors</div>
+									<div class="why_list_text">More than 20 years of trust</div>
+								</div>
+							</li>
+
+							<!-- Why List Item -->
+							<li class="d-flex flex-row align-items-center justify-content-start">
+								<div
+									class="icon_container d-flex flex-column align-items-center justify-content-center">
+									<div class="icon"><img src="{% static 'website/images/icon_3.svg'%}"
+											alt="https://www.flaticon.com/authors/prosymbols"></div>
+								</div>
+								<div class="why_list_content">
+									<div class="why_list_title">Great Feedback</div>
+									<div class="why_list_text">People all over the US trust us with their pets</div>
+								</div>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Call to action -->
+
+<div class="cta">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div
+					class="cta_container d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-start">
+					<div class="cta_content">
+						<div class="cta_title">Make your appointment today!</div>
+						<div class="cta_text">You can easily schedule an appointment using the form on our website to
+							have your pet examined.</div>
+					</div>
+					<div class="cta_phone ml-lg-auto">+34 586 778 8892</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Services -->
+
+<div class="services">
+	<div class="container">
+		<div class="row">
+			<div class="col text-center">
+				<div class="section_title_container">
+					<div class="section_subtitle">This is COD Pets</div>
+					<div class="section_title">
+						<h2>Our Services</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row services_row">
+
+			<!-- Service -->
+			<div class="col-xl-4 col-md-6 service_col">
+				<div class="service text-center">
+					<div class="service">
+						<div
+							class="icon_container d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
+							<div class="icon"><img src="{% static 'website/images/icon_4.svg'%}"
+									alt="https://www.flaticon.com/authors/prosymbols"></div>
+						</div>
+						<div class="service_title">Senior Pet Care</div>
+						<div class="service_text">
+							<p>Whether you have watched your pet age or you have adopted an older pet, senior pet care
+								is very different than caring for a younger animal. Correct senior pet carecan increase
+								their lifespan and ensure further comfort.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Service -->
+			<div class="col-xl-4 col-md-6 service_col">
+				<div class="service text-center">
+					<div class="service">
+						<div
+							class="icon_container d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
+							<div class="icon"><img src="{% static 'website/images/icon_5.svg'%}"
+									alt="https://www.flaticon.com/authors/prosymbols"></div>
+						</div>
+						<div class="service_title">Surgery and Hospitalization</div>
+						<div class="service_text">
+							<p>Our highly trained doctors and fully equipped high-tech surgery suites ensure your pet’s
+								safety during and after surgery. We use monitoring equipment to track your pet’s vital
+								signs and high quality anesthesia to minimize risk.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Service -->
+			<div class="col-xl-4 col-md-6 service_col">
+				<div class="service text-center">
+					<div class="service">
+						<div
+							class="icon_container d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
+							<div class="icon"><img src="{% static 'website/images/icon_6.svg'%}"
+									alt="https://www.flaticon.com/authors/prosymbols"></div>
+						</div>
+						<div class="service_title">Breeding Services</div>
+						<div class="service_text">
+							<p>Our clinic offers a range of assisted reproductive services for all kinds of animals.
+								including embryo transfer and foetal sexing. Embryo transfer involves transplanting an
+								embryo from a donor mare to a recipient…</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Service -->
+			<div class="col-xl-4 col-md-6 service_col">
+				<div class="service text-center">
+					<div class="service">
+						<div
+							class="icon_container d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
+							<div class="icon"><img src="{% static 'website/images/icon_7.svg'%}"
+									alt="https://www.flaticon.com/authors/prosymbols"></div>
+						</div>
+						<div class="service_title">Preventive Care and Check-Ups</div>
+						<div class="service_text">
+							<p>Nothing is more important than keeping our patients healthy. Preventive medicine focuses
+								on avoiding disease and trying to find subtle changes that will help us catch issues
+								before they become major life-threatening problems.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Service -->
+			<div class="col-xl-4 col-md-6 service_col">
+				<div class="service text-center">
+					<div class="service">
+						<div
+							class="icon_container d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
+							<div class="icon"><img src="{% static 'website/images/icon_8.svg'%}"
+									alt="https://www.flaticon.com/authors/prosymbols"></div>
+						</div>
+						<div class="service_title">Dental Care</div>
+						<div class="service_text">
+							<p>With regular cleaning and polishing we can prevent painful decay and enhance the life of
+								your pet. And, when problems do arise, we can pinpoint the areas that need our special
+								attention using digital dental radiography.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Service -->
+			<div class="col-xl-4 col-md-6 service_col">
+				<div class="service text-center">
+					<div class="service">
+						<div
+							class="icon_container d-flex flex-column align-items-center justify-content-center ml-auto mr-auto">
+							<div class="icon"><img src="{% static 'website/images/icon_3.svg'%}"
+									alt="https://www.flaticon.com/authors/prosymbols"></div>
+						</div>
+						<div class="service_title">Diagnosis & Treatment Services</div>
+						<div class="service_text">
+							<p>We use advanced diagnostic equipment, including digital radiography, electrocardiograms
+								and digital otoscopy that also give our vets a powerful set of tools for finding and
+								solving animal health care problems fast.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<!-- Extra -->
+
+<div class="extra">
+	<div class="parallax_background parallax-window" data-parallax="scroll"
+		data-image-src="{% static 'website/images/animal_extra.jpg'%}" data-speed="0.8"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="extra_container d-flex flex-row align-items-start justify-content-end">
+					<div class="extra_content">
+						<div class="extra_disc d-flex flex-row align-items-end justify-content-start">
+							<div>30<span>%</span></div>
+							<div>Discount</div>
+						</div>
+						<div class="extra_title">January 2021</div>
+						<div class="extra_text">
+							<p>Save 30% on any package for the New Year!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Newsletter -->
+
+{% block newsletter %}
+{%endblock %}
+
+{% endblock %}
