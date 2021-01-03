@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 from pathlib import Path
 from django.core.mail import send_mail
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -133,6 +134,6 @@ STATICFILES_DIRS = [
 EMAIL_HOST = 'smtp.mail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'baledodge@mail.com'
-EMAIL_HOST_PASSWORD = ''
+EMAIL_HOST_PASSWORD = config('AT_MAIL_PASSWORD')
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL_ = True
