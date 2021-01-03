@@ -14,6 +14,9 @@ import os
 from pathlib import Path
 from django.core.mail import send_mail
 from decouple import config
+import django_on_heroku
+import dj_database_url
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -51,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'vet.urls'
@@ -127,6 +131,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 # https://myaccount.google.com/lesssecureapps
 
 # email settings
@@ -137,3 +143,5 @@ EMAIL_HOST_USER = 'baledodge@mail.com'
 EMAIL_HOST_PASSWORD = config('AT_MAIL_PASSWORD')
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL_ = True
+
+django_on_heroku.settings(locals())
